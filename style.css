@@ -44,10 +44,6 @@ body {
     text-align:center;
     padding-top:rem;
   }
-  /* Set the background color of body to tan */
-body {
-  background-color: tan;
-}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {

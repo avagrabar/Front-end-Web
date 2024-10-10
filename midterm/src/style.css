@@ -1,0 +1,80 @@
+body {
+  background-image: url("./collage.png");
+  background-color:DarkSeaGreen;
+  font-family:trebuchet MS;
+  font-size: 8em;
+  color:olive;
+}
+
+#background {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* * {
+  margin: 0;
+  padding: 00;
+} */
+
+header {
+  position:relative;
+  font-size: 5em;
+  height: 2rem;
+  
+  padding: 1rem;
+  margin: 0.3rem;
+  
+  background-color:lightgreen;
+  /* -webkit-transition: 0.2s;
+  -moz-transition: 0.2s; 
+  -ms-transition: 0.2s;  */
+}
+
+.right-menu {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+#search-box {
+  float: right;
+  background-color: red;
+}
+
+footer {
+  position:absolute;
+  width:100%;
+  text-align:center;
+  padding: 2rem;
+  bottom:0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+#footer-nav {
+  text-align:center;
+  position:relative;
+}
+
+#lowergroup {
+  display: flex;
+ flex-direction: row; 
+justify-content: center;
+align-items: space-between;
+ position: absolute;
+right: 80%;
+bottom: 10px;
+
+}
+  
+a{ font-size: 3em; }
+
+button {
+  color: rgb(48, 148, 56);
+}
+
+#signin {
+  color: blue;
+}
