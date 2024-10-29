@@ -1,0 +1,71 @@
+  //Final Question)
+      
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Counter</title>
+  <style>
+    #container1, #container2 {
+      padding: 10px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+    .count-output {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same HTML Elements (paragraphs) -->
+  <div id="container1">
+    <p>This is paragraph 1 in container 1.</p>
+    <p>This is paragraph 2 in container 1.</p>
+    <p>This is paragraph 3 in container 1.</p>
+  </div>
+
+  <div id="container2">
+    <p>This is paragraph 1 in container 2.</p>
+    <p>This is paragraph 2 in container 2.</p>
+    <p>This is paragraph 3 in container 2.</p>
+  </div>
+
+  <p>This is a standalone paragraph 1.</p>
+  <p>This is a standalone paragraph 2.</p>
+  <p>This is a standalone paragraph 3.</p>
+  
+  <!-- Buttons to Trigger Functions -->
+  <button onclick="countParagraphs()">Count All Paragraphs</button>
+  <button onclick="countContainer1Elements()">Count Elements in Container 1</button>
+  <button onclick="countContainer2Elements()">Count Elements in Container 2</button>
+
+  <!-- Empty Divs for Output -->
+  <div id="output1" class="count-output"></div>
+  <div id="output2" class="count-output"></div>
+  <div id="output3" class="count-output"></div>
+
+  <script>
+    // Function to count and display the number of <p> elements on the page
+    function countParagraphs() {
+      const paragraphs = document.querySelectorAll("p");
+      document.getElementById("output1").textContent = `There are ${paragraphs.length} paragraph tags on this page.`;
+    }
+
+    // Function to count and display the number of elements inside the first container
+    function countContainer1Elements() {
+      const container1Elements = document.querySelectorAll("#container1 > *");
+      document.getElementById("output2").textContent = `There are ${container1Elements.length} elements inside container 1.`;
+    }
+
+    // Function to count and display the number of elements inside the second container
+    function countContainer2Elements() {
+      const container2Elements = document.querySelectorAll("#container2 > *");
+      document.getElementById("output3").textContent = `There are ${container2Elements.length} elements inside container 2.`;
+    }
+  </script>
+
+</body>
+</html>
