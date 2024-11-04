@@ -1,0 +1,35 @@
+// Function to change the background color of the playground div
+function changeBackgroundColor() {
+  const playground = document.getElementById("playground");
+  playground.style.backgroundColor = 
+    playground.style.backgroundColor === "lightblue" ? "white" : "lightblue";
+}
+
+// Function to display an alert with the text from the input
+function showAlert() {
+  const input = document.getElementById("textInput").value;
+  if (input) {
+    alert(`You entered: ${input}`);
+  } else {
+    alert("Please enter some text.");
+  }
+}
+
+// Event listener for the 'Change Background Color' button
+document.getElementById("colorButton").addEventListener("click", changeBackgroundColor);
+
+// Event listener for the 'Show Alert' button
+document.getElementById("alertButton").addEventListener("click", showAlert);
+
+// Event listener for the input field to display the entered text in the displayText paragraph
+document.getElementById("textInput").addEventListener("input", function() {
+  document.getElementById("displayText").textContent = this.value;
+});
+
+// Event listener for the hover box to change color when the user hovers over it
+document.getElementById("hoverBox").addEventListener("mouseenter", function() {
+  this.style.backgroundColor = "coral";
+});
+document.getElementById("hoverBox").addEventListener("mouseleave", function() {
+  this.style.backgroundColor = "#4CAF50";
+});
